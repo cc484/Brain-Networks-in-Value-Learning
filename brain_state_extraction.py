@@ -98,7 +98,8 @@ def brain_st_extr(condition_matrix, g_val):
         m = np.concatenate(b[:], axis=dim+1)
         bn_final[sessI] = np.nanmean(m, 3)
 
-    return b_final, qpc_total, bn_final, nqpc_total
+    ret_tup = (b_final, qpc_total, bn_final, nqpc_total)
+    return ret_tup
 
 
 

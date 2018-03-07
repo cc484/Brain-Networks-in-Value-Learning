@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fff0d70f-df6d-4037-b18d-db4c7319ea12" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/brain_state_extraction.py" afterPath="$PROJECT_DIR$/brain_state_extraction.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+            <state relative-caret-position="211">
+              <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -38,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="brain_state_extraction.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="brain_state_extraction.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/brain_state_extraction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+            <state relative-caret-position="87">
+              <caret line="93" column="24" lean-forward="true" selection-start-line="93" selection-start-column="24" selection-end-line="93" selection-end-column="24" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -106,6 +105,7 @@
       <find>def __insert</find>
       <find>__insert</find>
       <find>__remove</find>
+      <find>g_val</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -773,20 +773,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/brain_state_extraction.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+        <state relative-caret-position="211">
+          <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/brain_state_extraction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        <state relative-caret-position="87">
+          <caret line="93" column="24" lean-forward="true" selection-start-line="93" selection-start-column="24" selection-end-line="93" selection-end-column="24" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
