@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import networkx as nx
+import networkx.convert_matrix as nx_cm
 from louvain import mod_max
 from consensus_iterative import cons_iter
 
@@ -31,8 +32,9 @@ def brain_st_extr(condition_matrix, g_val):
 
     for i in range(max_cms):
         # Compute time x time correlation matrix
-        tt_matrix = np.corrcoef(condition_matrix[i].T)
-        tt_graph = nx.from_numpy_array(tt_matrix)
+        tt_arr = np.corrcoef(condition_matrix[i].T)
+        tt_matrix = np.asmatrix(tt_arr)
+        tt_graph = nx_cm.from_numpy_matrix(tt_matrix)
 
         # Compute null model for tt_matrix
         tt_matrix_u = np.triu(tt_matrix, 1)

@@ -16,16 +16,16 @@ def cons_iter(c):
     qpc: quality of the consensus (lower == better)
     """
 
-    n_part = np.size(c[:][1]) # number of partitions
-    m = np.size(C[1][:]) # size of the network
+    n_part = np.size(c[:, 1]) # number of partitions
+    m = np.size(C[1, :]) # size of the network
 
     c_rand3 = np.zeros(np.size(c))
     x = np.zeros(m, m)
-    x_rand3 = X
+    x_rand3 = x
 
     for i in range(n_part):
         pr = np.random.permutation(m)
-        c_rand3[i][:] = c[i][pr]
+        c_rand3[i, :] = c[i, pr]
 
     for i in range(n_part):
         for k in range(m):
