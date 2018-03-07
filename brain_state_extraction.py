@@ -20,16 +20,16 @@ def brain_st_extr(condition_matrix, g_val):
     nqpc_total:
     """
 
-    cm_size = condition_matrix.shape  # size of condition matrix
-    max_cms = np.max(cm_size)  # max dimension of the condition matrix size
+    cm_size = list(condition_matrix.shape)  # size of condition matrix
+    max_cms = max(cm_size)  # max dimension of the condition matrix size
 
-    s = pd.DataFrame(max_cms, 100)
-    sn = pd.DataFrame(max_cms, 100)
+    s = pd.DataFrame()
+    sn = pd.DataFrame()
 
-    q = np.zeros((cm_size, 100), float)
-    qn = np.zeros((cm_size, 100), float)
+    q = np.zeros((max_cms, 100))
+    qn = np.zeros((max_cms, 100))
 
-    for i in range(cm_size):
+    for i in range(max_cms):
         # Compute time x time correlation matrix
         tt_matrix = np.corrcoef(condition_matrix[i].T)
         tt_graph = nx.from_numpy_array(tt_matrix)

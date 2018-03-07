@@ -21,7 +21,7 @@ def main():
 
     brain_states = np.array(brain_states_arr)
     for n in range(20):
-        return 's' + str(n + 1) + str(brain_states[n])
+        print('s' + str(n + 1) + ' = ' + str(brain_states[n]))
 
 
 if __name__ == "__main__":
