@@ -43,44 +43,63 @@ def brain_st_extr(condition_matrix, g_val):
         n_matrix[ind] = tt_matrix_u[ind[p]]
 
         for j in np.max(tt_matrix.size):
-            n_matrix[i][j] = 1
+            n_matrix[i, j] = 1
 
         # Apply community detection using mod_mox
         for runI in range(100):
-            s[i][runI], q[i][runI] = mod_max(tt_graph, g_val)
-            sn[i][runI], qn[i][runI] = mod_max(tt_graph, g_val)
+            s[i, runI], q[i, runI] = mod_max(tt_graph, g_val)
+            sn[i, runI], qn[i, runI] = mod_max(tt_graph, g_val)
 
     s_total = pd.DataFrame(max_cms, 1)
     for itr in max_cms:
-        s_total[itr] = s[itr][1]
+        s_total[itr] = s[itr, 1]
         for runItr in range(2, 100):
             s_total[itr] = np.hstack((s_total[itr], s[itr][runItr]))
 
     qpc_total = 0
-    s_total2 = []
+    s_total2 = pd.DataFrame()
     for sessI in max_cms:
         s2, q2, x_new3, qpc = cons_iter(s_total[sessI].T)
         s_total2[sessI] = s2.T
         qpc_total = qpc_total + qpc
 
-    b = []
+    b = pd.DataFrame()
+    b_final = pd.DataFrame()
     for sessI in max_cms:
         for runI in range(100):
             for j in np.max(np.max(s_total2[sessI])):
                 br = b[runI]
-                br[:][j] = np.mean(condition_matrix[sessI].ravel.nonzero(s_total2[sessI]))
+                st2_ind = s_total2[sessI]
+                br[:, j] = np.mean(condition_matrix[sessI][np.where(st2_ind[:, runI] == j), 1], 1).T
 
-    """
-    dim = np.ndim(b[1])
-    M = np.concatenate(dim + 1, B[:])
+        dim = np.ndim(b[1])
+        m = np.concatenate(dim + 1, b[:])
+        b_final[sessI] = np.nanmean(m, 3)
 
-    b_final[sessI] = np.nanmean(M, 3)
+    sn_total = pd.DataFrame(max_cms, 1)
+    for iter in max_cms:
+        sn_total[iter] = sn[iter, 1]
+        for runIter in range(2, 100):
+            sn_total[iter] = np.hstack((sn_total[iter], s[iter, runIter]))
 
-    bn_final[sessI] = np.nanmean(M, 3)
     nqpc_total = 0
+    sn_total2 = pd.DataFrame()
+    for sessI in range(max_cms):
+        sn2, qn2, xn_new3, nqpc = cons_iter(sn_total[sessI].T)
+        sn_total2[sessI] = sn2.T
+        nqpc_total = nqpc_total + nqpc
 
-    return (b_final, qpc_total, bn_final, nqpc_total)
-    """
+    bn_final = pd.DataFrame()
+    for sessI in range(max_cms):
+        for runI in range(100):
+            for j in range(max(max(sn_total2[sessI]))):
+                b[runI][:, j] = np.mean(condition_matrix[sessI][np.where(st2_ind[:, runI] == j), 1], 1).T
+        dim = np.ndim(b[1])
+        m = np.concatenate(b[:], axis=dim+1)
+        bn_final[sessI] = np.nanmean(m, 3)
+
+    return b_final, qpc_total, bn_final, nqpc_total
+
 
 
 
