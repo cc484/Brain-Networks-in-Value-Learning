@@ -16,10 +16,6 @@ def main():
     for s in subject:
         # converts csv to numpy array
         condition_matrix = np.genfromtxt(subject[s] + 'day1/LEARN1/TS_HOA112.csv', delimiter=',')
-
-        print(np.corrcoef(condition_matrix))
-        print(list(condition_matrix.shape))
-
         # stores returned tuple values from brain_state_extraction in brain_states array
         brain_states_arr[s] = brain_st_extr(condition_matrix, g_val)
 

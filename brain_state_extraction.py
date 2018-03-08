@@ -24,8 +24,8 @@ def brain_st_extr(condition_matrix, g_val):
     cm_size = list(condition_matrix.shape)  # size of condition matrix
     max_cms = max(cm_size)  # max dimension of the condition matrix size
 
-    s = pd.DataFrame()
-    sn = pd.DataFrame()
+    s = np.empty((max_cms, 100))
+    sn = np.empty((max_cms, 100))
 
     q = np.zeros((max_cms, 100))
     qn = np.zeros((max_cms, 100))
@@ -38,19 +38,24 @@ def brain_st_extr(condition_matrix, g_val):
 
         # Compute null model for tt_matrix
         tt_matrix_u = np.triu(tt_matrix, 1)
-        x_vector = tt_matrix_u[abs(tt_matrix_u).ravel.nonzero() > 0]
-        p = np.random.permutation(np.size(x_vector))
-        n_matrix = np.zeros(tt_matrix.size)
-        ind = abs(tt_matrix_u).ravel.nonzero > 0
-        n_matrix[ind] = tt_matrix_u[ind[p]]
+        x_vector = tt_matrix_u[np.where(np.absolute(tt_matrix_u) > 0)]
 
-        for j in np.max(tt_matrix.size):
+        n_matrix = np.zeros(tt_matrix.shape)
+        p = np.random.permutation(x_vector.size)
+        ind = np.where(np.absolute(tt_matrix_u) > 0)
+        for i in ind:
+            for j in p:
+                ip = ind[j]
+                n_matrix[i] = tt_matrix_u[ip]
+
+        n_matrix = n_matrix + n_matrix.T
+        for j in range(max(tt_matrix.shape)):
             n_matrix[i, j] = 1
 
         # Apply community detection using mod_mox
         for runI in range(100):
-            s[i, runI], q[i, runI] = mod_max(tt_graph, g_val)
-            sn[i, runI], qn[i, runI] = mod_max(tt_graph, g_val)
+            s[i, runI], q[i, runI] = mod_max(tt_graph, resolution=g_val)
+            sn[i, runI], qn[i, runI] = mod_max(tt_graph, resolution=g_val)
 
     s_total = pd.DataFrame(max_cms, 1)
     for itr in max_cms:
