@@ -139,6 +139,8 @@ def mod_max(graph, partition=None,
                                 weight,
                                 resolution,
                                 randomize)
+
+    # return values of best partition dict and the modularity of the graph partition
     mm_partition = partition_at_level(dendo, len(dendo) - 1)
     mm_mod = modularity(mm_partition, graph)
 

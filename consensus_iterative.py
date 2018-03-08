@@ -6,8 +6,8 @@ def cons_iter(c):
     """
     construct a consensus (representative) partition using the iterative thresholding
     procedure
-    :param C:
-        pxn matrix of community assignments where p is the
+    :param c:
+        p x n matrix of community assignments where p is the
         number of optimizations and n the number of node
     :return:
     s2: pxn matrix of new community assignments
@@ -16,8 +16,8 @@ def cons_iter(c):
     qpc: quality of the consensus (lower == better)
     """
 
-    n_part = np.size(c[:, 1]) # number of partitions
-    m = np.size(C[1, :]) # size of the network
+    n_part = np.size(c[:, 0])  # number of partitions
+    m = np.size(c[0, :])  # size of the network
 
     c_rand3 = np.zeros(np.size(c))
     x = np.zeros(m, m)

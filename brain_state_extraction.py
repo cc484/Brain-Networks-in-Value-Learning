@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd
 import networkx as nx
-import networkx.convert_matrix as nx_cm
 from louvain import mod_max
 from consensus_iterative import cons_iter
 
@@ -24,8 +23,8 @@ def brain_st_extr(condition_matrix, g_val):
     cm_size = list(condition_matrix.shape)  # size of condition matrix
     max_cms = max(cm_size)  # max dimension of the condition matrix size
 
-    s = np.empty((max_cms, 100))
-    sn = np.empty((max_cms, 100))
+    s = np.asarray([[dict() for i in range(100)] for j in range(max_cms)])
+    sn = np.asarray([[dict() for i in range(100)] for j in range(max_cms)])
 
     q = np.zeros((max_cms, 100))
     qn = np.zeros((max_cms, 100))
@@ -34,7 +33,7 @@ def brain_st_extr(condition_matrix, g_val):
         # Compute time x time correlation matrix
         tt_arr = np.corrcoef(condition_matrix[i].T)
         tt_matrix = np.asmatrix(tt_arr)
-        tt_graph = nx_cm.from_numpy_matrix(tt_matrix)
+        tt_graph = nx.from_numpy_matrix(tt_matrix)
 
         # Compute null model for tt_matrix
         tt_matrix_u = np.triu(tt_matrix, 1)
@@ -54,25 +53,25 @@ def brain_st_extr(condition_matrix, g_val):
 
         # Apply community detection using mod_mox
         for runI in range(100):
-            s[i, runI], q[i, runI] = mod_max(tt_graph, resolution=g_val)
-            sn[i, runI], qn[i, runI] = mod_max(tt_graph, resolution=g_val)
+            s[i, runI], q[i, runI] = mod_max(tt_graph, resolution=float(g_val))
+            sn[i, runI], qn[i, runI] = mod_max(tt_graph, resolution=float(g_val))
 
-    s_total = pd.DataFrame(max_cms, 1)
-    for itr in max_cms:
-        s_total[itr] = s[itr, 1]
-        for runItr in range(2, 100):
-            s_total[itr] = np.hstack((s_total[itr], s[itr][runItr]))
+    s_total = np.asarray([dict() for i in range(max_cms)])
+    for itr in range(max_cms):
+        s_total[itr] = s[itr, 0]
+        for runItr in range(1, 100):
+            s_total[itr] = np.hstack((s_total[itr], s[itr, runItr]))
 
     qpc_total = 0
     s_total2 = pd.DataFrame()
-    for sessI in max_cms:
+    for sessI in range(max_cms):
         s2, q2, x_new3, qpc = cons_iter(s_total[sessI].T)
         s_total2[sessI] = s2.T
         qpc_total = qpc_total + qpc
 
     b = pd.DataFrame()
     b_final = pd.DataFrame()
-    for sessI in max_cms:
+    for sessI in range(max_cms):
         for runI in range(100):
             for j in np.max(np.max(s_total2[sessI])):
                 br = b[runI]
@@ -83,10 +82,10 @@ def brain_st_extr(condition_matrix, g_val):
         m = np.concatenate(dim + 1, b[:])
         b_final[sessI] = np.nanmean(m, 3)
 
-    sn_total = pd.DataFrame(max_cms, 1)
-    for iter in max_cms:
-        sn_total[iter] = sn[iter, 1]
-        for runIter in range(2, 100):
+    sn_total = np.asarray([dict() for i in range(max_cms)])
+    for itr in range(max_cms):
+        sn_total[itr] = sn[itr, 0]
+        for runIter in range(1, 100):
             sn_total[iter] = np.hstack((sn_total[iter], s[iter, runIter]))
 
     nqpc_total = 0
