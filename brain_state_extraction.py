@@ -57,6 +57,7 @@ def brain_st_extr(condition_matrix, g_val):
             sn[i, runI], qn[i, runI] = mod_max(tt_graph, resolution=float(g_val))
 
     s_total = np.asarray([dict() for i in range(max_cms)])
+    print(s_total)
     for itr in range(max_cms):
         s_total[itr] = s[itr, 0]
         for runItr in range(1, 100):
