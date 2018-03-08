@@ -73,6 +73,9 @@ def modularity(partition, graph, weight='weight'):
     >>> part = best_partition(G)
     >>> modularity(part, G)
     """
+    # Taken from Brandes et al.
+    # if graph.number_of_edges == 0:
+        # return 1
 
     if graph.is_directed():
         raise TypeError("Bad graph type, use only non directed graph")

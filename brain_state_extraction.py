@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd
-import networkx as nx
-from louvain import mod_max
+from multislice_static_signed import multislice_stat_si
 from consensus_iterative import cons_iter
 
 
@@ -31,9 +30,10 @@ def brain_st_extr(condition_matrix, g_val):
 
     for i in range(max_cms):
         # Compute time x time correlation matrix
-        tt_arr = np.corrcoef(condition_matrix[i].T)
+        tt_arr = np.corrcoef(condition_matrix[:, i].T)
         tt_matrix = np.asmatrix(tt_arr)
-        tt_graph = nx.from_numpy_matrix(tt_matrix)
+        print(tt_matrix)
+        print(tt_arr)
 
         # Compute null model for tt_matrix
         tt_matrix_u = np.triu(tt_matrix, 1)
@@ -42,10 +42,10 @@ def brain_st_extr(condition_matrix, g_val):
         n_matrix = np.zeros(tt_matrix.shape)
         p = np.random.permutation(x_vector.size)
         ind = np.where(np.absolute(tt_matrix_u) > 0)
-        for i in ind:
-            for j in p:
-                ip = ind[j]
-                n_matrix[i] = tt_matrix_u[ip]
+        for x in ind:
+            for y in p:
+                ip = ind[y]
+                n_matrix[x] = tt_matrix_u[ip]
 
         n_matrix = n_matrix + n_matrix.T
         for j in range(max(tt_matrix.shape)):
@@ -53,8 +53,8 @@ def brain_st_extr(condition_matrix, g_val):
 
         # Apply community detection using mod_mox
         for runI in range(100):
-            s[i, runI], q[i, runI] = mod_max(tt_graph, resolution=float(g_val))
-            sn[i, runI], qn[i, runI] = mod_max(tt_graph, resolution=float(g_val))
+            s[i, runI], q[i, runI] = multislice_stat_si(tt_matrix, g_val)
+            sn[i, runI], qn[i, runI] = multislice_stat_si(n_matrix, g_val)
 
     s_total = np.asarray([dict() for i in range(max_cms)])
     print(s_total)
@@ -100,6 +100,7 @@ def brain_st_extr(condition_matrix, g_val):
     for sessI in range(max_cms):
         for runI in range(100):
             for j in range(max(max(sn_total2[sessI]))):
+                st2_ind = sn_total2[sessI]
                 b[runI][:, j] = np.mean(condition_matrix[sessI][np.where(st2_ind[:, runI] == j), 1], 1).T
         dim = np.ndim(b[1])
         m = np.concatenate(b[:], axis=dim+1)

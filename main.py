@@ -14,10 +14,11 @@ def main():
     g_val = 1
     brain_states_arr = []
     for s in subject:
-        # converts csv to numpy array
-        condition_matrix = np.genfromtxt(subject[s] + 'day1/LEARN1/TS_HOA112.csv', delimiter=',')
-        # stores returned tuple values from brain_state_extraction in brain_states array
-        brain_states_arr[s] = brain_st_extr(condition_matrix, g_val)
+        for i in range(len(subject)):
+            # converts csv to numpy array
+            condition_matrix = np.genfromtxt(subject[s] + 'day1/LEARN1/TS_HOA112.csv', delimiter=',')
+            # stores returned tuple values from brain_state_extraction in brain_states array
+            brain_states_arr[i] = brain_st_extr(condition_matrix, g_val)
 
     brain_states = np.array(brain_states_arr)
     for n in range(20):

@@ -19,6 +19,7 @@
       <w>laplacian</w>
       <w>louvain</w>
       <w>multiscale</w>
+      <w>multislice</w>
       <w>neighborcom</w>
       <w>neighcom</w>
       <w>networkx</w>
