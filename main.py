@@ -22,14 +22,17 @@ def main():
 
     # extracts brain states from all subjects during day1 brain scans
     g_val = 1
-    brain_states_arr = np.empty(len(subject_dict), dtype=tuple())
-    for s, d, l in subject_dict, days_dict, learn_dict
-        # converts csv to numpy array
-        condition_matrix = np.genfromtxt(subject_dict[s] + days_dict[d] + learn_dict[l] +
-                                        'TS_HOA112.csv' , delimiter=',')
-        for i in range(len(subject_dict)):
-            # stores returned tuple values from brain_state_extraction in brain_states array
-            brain_states_arr[i] = brain_st_extr(condition_matrix, g_val)
+    brain_states_arr = np.empty(len(subject_dict), dtype=tuple)
+
+    for s in subject_dict:
+        for d in days_dict:
+            for l in learn_dict:
+                # converts csv to numpy array
+                condition_matrix = np.genfromtxt(subject_dict[s] + days_dict[d] + learn_dict[l] +
+                                                 'TS_HOA112.csv', delimiter=',')
+                print(condition_matrix.shape)
+                # stores returned tuple values from brain_state_extraction in brain_states array
+                brain_states_arr[s-1] = brain_st_extr(condition_matrix, g_val)
 
     brain_states = np.array(brain_states_arr)
     for n in range(20):

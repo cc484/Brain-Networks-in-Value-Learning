@@ -1,5 +1,6 @@
 import random
 import networkx as nx
+from numpy import nan
 from community_status import Status
 
 __author__ = """Thomas Aynaud (thomas.aynaud@lip6.fr)"""
@@ -73,9 +74,6 @@ def modularity(partition, graph, weight='weight'):
     >>> part = best_partition(G)
     >>> modularity(part, G)
     """
-    # Taken from Brandes et al.
-    # if graph.number_of_edges == 0:
-        # return 1
 
     if graph.is_directed():
         raise TypeError("Bad graph type, use only non directed graph")
@@ -84,7 +82,8 @@ def modularity(partition, graph, weight='weight'):
     deg = dict([])
     links = graph.size(weight=weight)
     if links == 0:
-        raise ValueError("A graph without link has an undefined modularity")
+        return nan
+        # raise ValueError("A graph without link has an undefined modularity")
 
     for node in graph:
         com = partition[node]

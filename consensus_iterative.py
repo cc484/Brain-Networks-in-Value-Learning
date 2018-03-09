@@ -1,5 +1,5 @@
 import numpy as np
-from louvain import mod_max
+from multislice_static_signed import multislice_stat_si
 
 
 def cons_iter(c):
@@ -16,24 +16,37 @@ def cons_iter(c):
     qpc: quality of the consensus (lower == better)
     """
 
-    n_part = np.size(c[:, 0])  # number of partitions
-    m = np.size(c[0, :])  # size of the network
+    print(c.shape)
+    print(c.T.shape)
+    n_part = c.shape[0] # number of partitions
+    m = 1  # size of the network
 
-    c_rand3 = np.zeros(np.size(c))
-    x = np.zeros(m, m)
-    x_rand3 = x
+    c_rand3 = np.zeros(c.shape)  # permuted version of c
+    x = np.zeros((m, m))  # nodal association matrix for c
+    x_rand3 = x  # random nodal association matrix for c_rand3
 
+    # NODAL ASSOCIATION MATRIX
+
+    # random permutation matrix
     for i in range(n_part):
         pr = np.random.permutation(m)
-        c_rand3[i, :] = c[i, pr]
+        c_rand3[i] = c[pr]
 
-    for i in range(n_part):
-        for k in range(m):
-            for p in range(m):
-                if np.equal(c[i][k], c[i][p]):
-                    x[k][p] = x[k][p] + 1
-                else:
-                    x_rand3[k][p] = x_rand3[k][p] + 0
+    for k in range(m):
+        for p in range(m):
+            # element [i, j] indicate the number of times that node i and node j have been
+            # assigned to the same community
+            if np.equal(c[k], c[p]):
+                x[k, p] = x[k, p] + 1
+            else:
+                x_rand3[k, p] = x_rand3[k, p] + 0
+
+            # element [i, j] indicate the number of times node i and node j are expected
+            # to be assigned to the same community by chance
+            if np.equal(c_rand3[i, k], c_rand3[i, p]):
+                x_rand3[k, p] = x_rand3[k, p] + 1
+            else:
+                x_rand3[k, p] = x_rand3[k, p] + 0
 
     x_new3 = np.zeros(m, m)
     x_new3[x > max(max(np.triu(x_rand3, 1)))] = x[x > max(max(np.triu(x_rand3, 1)))]
@@ -41,7 +54,7 @@ def cons_iter(c):
     s2 = []
     q2 = []
     for i in range(n_part):
-        s2[i][:], q2[i] = mod_max(x_new3, 1)
+        s2[i, :], q2[i] = multislice_stat_si(x_new3, 1)
 
     qpc = np.sum(np.sum(np.abs(np.diff(s2))))
 
