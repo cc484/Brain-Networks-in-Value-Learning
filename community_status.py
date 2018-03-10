@@ -44,9 +44,9 @@ class Status(object):
             for node in graph.nodes():
                 self.node2com[node] = count
                 deg = float(graph.degree(node, weight=weight))
-                if deg < 0:
-                    error = "Bad node degree ({})".format(deg)
-                    raise ValueError(error)
+                # if deg < 0:
+                    # error = "Bad node degree ({})".format(deg)
+                    # raise ValueError(error)
                 self.degrees[count] = deg
                 self.gdegrees[node] = deg
                 edge_data = graph.get_edge_data(node, node, default={weight: 0})

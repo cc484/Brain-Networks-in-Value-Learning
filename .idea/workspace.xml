@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fff0d70f-df6d-4037-b18d-db4c7319ea12" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/brain_state_extraction.py" afterPath="$PROJECT_DIR$/brain_state_extraction.py" />
-      <change beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Geometric_Mind.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Geometric_Mind.xml" />
+      <change beforePath="$PROJECT_DIR$/community_status.py" afterPath="$PROJECT_DIR$/community_status.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,7 +30,7 @@
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="358">
-              <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+              <caret line="25" column="20" lean-forward="false" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -38,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="brain_state_extraction.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="brain_state_extraction.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/brain_state_extraction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="623">
-              <caret line="47" column="49" lean-forward="true" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
+            <state relative-caret-position="-496">
+              <caret line="47" column="49" lean-forward="false" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -50,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="consensus_iterative.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="consensus_iterative.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/consensus_iterative.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+            <state relative-caret-position="370">
+              <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -77,11 +77,21 @@
       <file leaf-file-name="louvain.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/louvain.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-279">
-              <caret line="84" column="18" lean-forward="false" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="18" />
+            <state relative-caret-position="372">
+              <caret line="204" column="23" lean-forward="true" selection-start-line="204" selection-start-column="23" selection-end-line="204" selection-end-column="23" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="community_status.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/community_status.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1488">
+              <caret line="48" column="12" lean-forward="false" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -134,12 +144,12 @@
         <option value="$PROJECT_DIR$/calc_standard_matrices.py" />
         <option value="$PROJECT_DIR$/louvain.oy.py" />
         <option value="$PROJECT_DIR$/community_detection.py" />
-        <option value="$PROJECT_DIR$/community_status.py" />
         <option value="$PROJECT_DIR$/louvain.py" />
         <option value="$PROJECT_DIR$/multislice_static_signed.py" />
         <option value="$PROJECT_DIR$/consensus_iterative.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/brain_state_extraction.py" />
+        <option value="$PROJECT_DIR$/community_status.py" />
       </list>
     </option>
   </component>
@@ -149,9 +159,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="-8" />
-    <option name="width" value="1539" />
+    <option name="width" value="1807" />
     <option name="height" value="1448" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -196,68 +206,6 @@
             <path>
               <item name="Brain-Networks-in-Value-Learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="Brain-Networks-in-Value-Learning" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Brain-Networks-in-Value-Learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Brain-Networks-in-Value-Learning" type="462c0819:PsiDirectoryNode" />
-              <item name="HOA112" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Brain-Networks-in-Value-Learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Brain-Networks-in-Value-Learning" type="462c0819:PsiDirectoryNode" />
-              <item name="HOA112" type="462c0819:PsiDirectoryNode" />
-              <item name="dbrf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Brain-Networks-in-Value-Learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Brain-Networks-in-Value-Learning" type="462c0819:PsiDirectoryNode" />
-              <item name="HOA112" type="462c0819:PsiDirectoryNode" />
-              <item name="dbrf" type="462c0819:PsiDirectoryNode" />
-              <item name="s1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Brain-Networks-in-Value-Learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Brain-Networks-in-Value-Learning" type="462c0819:PsiDirectoryNode" />
-              <item name="HOA112" type="462c0819:PsiDirectoryNode" />
-              <item name="dbrf" type="462c0819:PsiDirectoryNode" />
-              <item name="s1" type="462c0819:PsiDirectoryNode" />
-              <item name="day1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Brain-Networks-in-Value-Learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Brain-Networks-in-Value-Learning" type="462c0819:PsiDirectoryNode" />
-              <item name="HOA112" type="462c0819:PsiDirectoryNode" />
-              <item name="dbrf" type="462c0819:PsiDirectoryNode" />
-              <item name="s1" type="462c0819:PsiDirectoryNode" />
-              <item name="day1" type="462c0819:PsiDirectoryNode" />
-              <item name="LEARN1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Brain-Networks-in-Value-Learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Brain-Networks-in-Value-Learning" type="462c0819:PsiDirectoryNode" />
-              <item name="HOA112" type="462c0819:PsiDirectoryNode" />
-              <item name="dbrf" type="462c0819:PsiDirectoryNode" />
-              <item name="s1" type="462c0819:PsiDirectoryNode" />
-              <item name="day1" type="462c0819:PsiDirectoryNode" />
-              <item name="LEARN2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Brain-Networks-in-Value-Learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Brain-Networks-in-Value-Learning" type="462c0819:PsiDirectoryNode" />
-              <item name="HOA112" type="462c0819:PsiDirectoryNode" />
-              <item name="dbrf" type="462c0819:PsiDirectoryNode" />
-              <item name="s1" type="462c0819:PsiDirectoryNode" />
-              <item name="day1" type="462c0819:PsiDirectoryNode" />
-              <item name="LEARN3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Brain-Networks-in-Value-Learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Brain-Networks-in-Value-Learning" type="462c0819:PsiDirectoryNode" />
-              <item name="HOA112" type="462c0819:PsiDirectoryNode" />
-              <item name="dbrf" type="462c0819:PsiDirectoryNode" />
-              <item name="s1" type="462c0819:PsiDirectoryNode" />
-              <item name="day1" type="462c0819:PsiDirectoryNode" />
-              <item name="REST" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -384,7 +332,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1539" height="1448" extended-state="0" />
+    <frame x="-8" y="0" width="1807" height="1448" extended-state="1" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290938" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27482128" sideWeight="0.5032733" order="7" side_tool="true" content_ui="tabs" />
@@ -393,7 +341,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10174881" sideWeight="0.4967267" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34101748" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290938" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20574163" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17388792" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23421264" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298887" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -785,34 +733,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/community_status.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1178">
-          <caret line="38" column="31" lean-forward="false" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/multislice_static_signed.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consensus_iterative.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HOA112/dbrf/s1/day1/LEARN1/TS_HOA112.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -837,30 +757,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/louvain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-279">
-          <caret line="84" column="18" lean-forward="false" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="358">
-          <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+          <caret line="25" column="20" lean-forward="false" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/multislice_static_signed.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/community_status.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1488">
+          <caret line="48" column="12" lean-forward="false" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/louvain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="204" column="23" lean-forward="true" selection-start-line="204" selection-start-column="23" selection-end-line="204" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/brain_state_extraction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="47" column="49" lean-forward="true" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
+        <state relative-caret-position="-496">
+          <caret line="47" column="49" lean-forward="false" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consensus_iterative.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
