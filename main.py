@@ -3,7 +3,7 @@ from brain_state_extraction import brain_st_extr
 
 
 def main():
-    # generate dictionary for subject and day filenames
+    # generate dictionary for subject, day and learn filenames for array creation
     header = 'HOA112/dbrf/'
     subject = {}
     for s in range(20):
@@ -16,27 +16,33 @@ def main():
         days[d] = 'day' + str(d) + '/'
 
     learn = {}
-    for l in range(4):
+    for l in range(3):
         l = l + 1
         learn[l] = 'LEARN' + str(l) + '/'
 
     # creates condition matrix of HOA112 parcellated BOLD magnitudes
+    # testing with just SUBJECT 1
     g_val = 1
-    brain_states_arr = np.empty(len(subject), dtype=tuple)
-    condition_matrix = np.empty((len(days), len(learn), len(subject)), dtype=np.array)
-    for s in subject:
-        for d in days:
-            for l in learn:
-                # converts csv to numpy array
-                condition_matrix = np.genfromtxt(subject[s] + days[d] + learn[l] +
-                                                 'TS_HOA112.csv', delimiter=',')
-        # stores returned tuple values from brain_state_extraction in brain_states array
-        brain_states_arr[s-1] = brain_st_extr(condition_matrix, g_val)
+    condition_matrix = np.empty((len(days), len(learn)), dtype=np.ndarray)
+
+    for d in days:
+        for l in learn:
+            # converts csv to numpy array
+            csv_arr = np.genfromtxt(subject[1] + days[d] + learn[l] + 'TS_HOA112.csv', delimiter=',')
+            condition_matrix[d-1, l-1] = csv_arr
 
     # extracts brain states from all subjects during day1 brain scans
-    brain_states = np.array(brain_states_arr)
-    for n in range(20):
-        print('s' + str(n + 1) + ' = ' + str(brain_states[n]))
+    brain_states = np.empty((len(days), len(learn)), dtype=tuple)
+    for d in days:
+        for l in learn:
+            # stores returned tuple values from brain_state_extraction in brain_states array
+            brain_states = brain_st_extr(condition_matrix, g_val)
+
+    print('SUBJECT 1 \n')
+    for d in days:
+        print('day' + str(d) + ' \n')
+        for l in learn:
+            print(' =      ' + str(brain_states[d-1, l-1]) + ' \n')
 
 
 if __name__ == "__main__":
