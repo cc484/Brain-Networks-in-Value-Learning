@@ -15,7 +15,8 @@ def cons_iter(c):
     x_new3: thresholded nodal association matrix
     qpc: quality of the consensus (lower == better)
     """
-
+    print(" ")
+    print(c)
     print(c.shape)
     n_part = c.shape[0]  # number of partitions
     m = c.shape[1]  # size of the network
