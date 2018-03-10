@@ -17,9 +17,8 @@ def cons_iter(c):
     """
 
     print(c.shape)
-    print(c.T.shape)
-    n_part = c.shape[0] # number of partitions
-    m = 1  # size of the network
+    n_part = c.shape[0]  # number of partitions
+    m = c.shape[1]  # size of the network
 
     c_rand3 = np.zeros(c.shape)  # permuted version of c
     x = np.zeros((m, m))  # nodal association matrix for c
@@ -30,7 +29,7 @@ def cons_iter(c):
     # random permutation matrix
     for i in range(n_part):
         pr = np.random.permutation(m)
-        c_rand3[i] = c[pr]
+        c_rand3[i, :] = c[i, pr]
 
     for k in range(m):
         for p in range(m):

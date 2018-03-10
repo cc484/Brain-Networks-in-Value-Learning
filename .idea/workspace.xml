@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fff0d70f-df6d-4037-b18d-db4c7319ea12" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Geometric_Mind.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Geometric_Mind.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/brain_state_extraction.py" afterPath="$PROJECT_DIR$/brain_state_extraction.py" />
       <change beforePath="$PROJECT_DIR$/consensus_iterative.py" afterPath="$PROJECT_DIR$/consensus_iterative.py" />
-      <change beforePath="$PROJECT_DIR$/louvain.py" afterPath="$PROJECT_DIR$/louvain.py" />
       <change beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change beforePath="$PROJECT_DIR$/multislice_static_signed.py" afterPath="$PROJECT_DIR$/multislice_static_signed.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,11 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="32" column="44" lean-forward="false" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
+            <state relative-caret-position="166">
+              <caret line="22" column="43" lean-forward="true" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -41,11 +41,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="brain_state_extraction.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="brain_state_extraction.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/brain_state_extraction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="52" column="76" lean-forward="false" selection-start-line="52" selection-start-column="76" selection-end-line="52" selection-end-column="76" />
+            <state relative-caret-position="1922">
+              <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="consensus_iterative.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/consensus_iterative.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="401">
+              <caret line="20" column="41" lean-forward="true" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -58,18 +70,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="217">
               <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="consensus_iterative.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/consensus_iterative.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -145,9 +145,9 @@
         <option value="$PROJECT_DIR$/community_status.py" />
         <option value="$PROJECT_DIR$/louvain.py" />
         <option value="$PROJECT_DIR$/multislice_static_signed.py" />
-        <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/consensus_iterative.py" />
         <option value="$PROJECT_DIR$/brain_state_extraction.py" />
+        <option value="$PROJECT_DIR$/consensus_iterative.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -157,9 +157,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="-8" />
-    <option name="width" value="1499" />
+    <option name="width" value="2051" />
     <option name="height" value="1448" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -208,25 +208,25 @@
             <path>
               <item name="Brain-Networks-in-Value-Learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="Brain-Networks-in-Value-Learning" type="462c0819:PsiDirectoryNode" />
-              <item name="LearnData" type="462c0819:PsiDirectoryNode" />
+              <item name="HOA112" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Brain-Networks-in-Value-Learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="Brain-Networks-in-Value-Learning" type="462c0819:PsiDirectoryNode" />
-              <item name="LearnData" type="462c0819:PsiDirectoryNode" />
+              <item name="HOA112" type="462c0819:PsiDirectoryNode" />
               <item name="dbrf" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Brain-Networks-in-Value-Learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="Brain-Networks-in-Value-Learning" type="462c0819:PsiDirectoryNode" />
-              <item name="LearnData" type="462c0819:PsiDirectoryNode" />
+              <item name="HOA112" type="462c0819:PsiDirectoryNode" />
               <item name="dbrf" type="462c0819:PsiDirectoryNode" />
               <item name="s1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Brain-Networks-in-Value-Learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="Brain-Networks-in-Value-Learning" type="462c0819:PsiDirectoryNode" />
-              <item name="LearnData" type="462c0819:PsiDirectoryNode" />
+              <item name="HOA112" type="462c0819:PsiDirectoryNode" />
               <item name="dbrf" type="462c0819:PsiDirectoryNode" />
               <item name="s1" type="462c0819:PsiDirectoryNode" />
               <item name="day1" type="462c0819:PsiDirectoryNode" />
@@ -234,7 +234,7 @@
             <path>
               <item name="Brain-Networks-in-Value-Learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="Brain-Networks-in-Value-Learning" type="462c0819:PsiDirectoryNode" />
-              <item name="LearnData" type="462c0819:PsiDirectoryNode" />
+              <item name="HOA112" type="462c0819:PsiDirectoryNode" />
               <item name="dbrf" type="462c0819:PsiDirectoryNode" />
               <item name="s1" type="462c0819:PsiDirectoryNode" />
               <item name="day1" type="462c0819:PsiDirectoryNode" />
@@ -243,7 +243,7 @@
             <path>
               <item name="Brain-Networks-in-Value-Learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="Brain-Networks-in-Value-Learning" type="462c0819:PsiDirectoryNode" />
-              <item name="LearnData" type="462c0819:PsiDirectoryNode" />
+              <item name="HOA112" type="462c0819:PsiDirectoryNode" />
               <item name="dbrf" type="462c0819:PsiDirectoryNode" />
               <item name="s1" type="462c0819:PsiDirectoryNode" />
               <item name="day1" type="462c0819:PsiDirectoryNode" />
@@ -252,7 +252,7 @@
             <path>
               <item name="Brain-Networks-in-Value-Learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="Brain-Networks-in-Value-Learning" type="462c0819:PsiDirectoryNode" />
-              <item name="LearnData" type="462c0819:PsiDirectoryNode" />
+              <item name="HOA112" type="462c0819:PsiDirectoryNode" />
               <item name="dbrf" type="462c0819:PsiDirectoryNode" />
               <item name="s1" type="462c0819:PsiDirectoryNode" />
               <item name="day1" type="462c0819:PsiDirectoryNode" />
@@ -261,7 +261,7 @@
             <path>
               <item name="Brain-Networks-in-Value-Learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="Brain-Networks-in-Value-Learning" type="462c0819:PsiDirectoryNode" />
-              <item name="LearnData" type="462c0819:PsiDirectoryNode" />
+              <item name="HOA112" type="462c0819:PsiDirectoryNode" />
               <item name="dbrf" type="462c0819:PsiDirectoryNode" />
               <item name="s1" type="462c0819:PsiDirectoryNode" />
               <item name="day1" type="462c0819:PsiDirectoryNode" />
@@ -392,21 +392,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1499" height="1448" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="0" width="2051" height="1448" extended-state="1" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290938" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27482128" sideWeight="0.5032733" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.54604834" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="0" y="0" width="594" height="1258" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5459632" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="0" y="0" width="594" height="1258" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298887" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10174881" sideWeight="0.4967267" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27106518" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34101748" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290938" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21152495" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15240507" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2999252" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23421264" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286479" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43037975" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -829,10 +828,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/multislice_static_signed.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="32" column="44" lean-forward="false" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
+        <state relative-caret-position="217">
+          <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -847,20 +846,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/multislice_static_signed.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/consensus_iterative.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="401">
+          <caret line="20" column="41" lean-forward="true" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -869,8 +858,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/brain_state_extraction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="52" column="76" lean-forward="false" selection-start-line="52" selection-start-column="76" selection-end-line="52" selection-end-column="76" />
+        <state relative-caret-position="1922">
+          <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="22" column="43" lean-forward="true" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

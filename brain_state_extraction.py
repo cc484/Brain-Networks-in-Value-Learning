@@ -24,8 +24,8 @@ def brain_st_extr(condition_matrix, g_val):
     #  max_cms = max(cm_size)  # max dimension of the condition matrix size
 
     # partition assignments structured as 2d array of dicts
-    s = np.asarray([[dict() for i in range( hoa112_dim)] for j in range(100)])
-    sn = np.asarray([[dict() for i in range(hoa112_dim)] for j in range(100)])
+    s = np.asarray([[dict() for i in range(100)] for j in range(hoa112_dim)])
+    sn = np.asarray([[dict() for i in range(100)] for j in range(hoa112_dim)])
 
     # array of modularity values
     q = np.zeros((hoa112_dim, 100))
@@ -55,42 +55,39 @@ def brain_st_extr(condition_matrix, g_val):
             s[i, runI], q[i, runI] = multislice_stat_si(tt_matrix, g_val)
             sn[i, runI], qn[i, runI] = multislice_stat_si(n_matrix, g_val)
 
-    s_total = np.asarray([[dict() for i in range(hoa112_dim)]])
-    print(s_total.shape)
-    print(s.shape)
+    s_total = np.empty((hoa112_dim, 1), dtype=dict)
     for itr in range(hoa112_dim):
         s_total[itr] = s[itr, 0]
         for runItr in range(1, 100):
-            s_total[itr] = np.hstack((s_total[itr], s[itr, runItr]))
+            s_total[itr, 0] = np.hstack((s_total[itr], s[itr, runItr]))
 
     qpc_total = 0
-    s_total2 = np.asarray([[dict() for i in range(hoa112_dim)]])
+    s_total2 = np.empty((hoa112_dim, 1), dtype=dict)
     for sessI in range(hoa112_dim):
         s2, q2, x_new3, qpc = cons_iter(s_total[sessI].T)
         s_total2[sessI] = s2.T
         qpc_total = qpc_total + qpc
 
-    b = pd.DataFrame()
-    b_final = pd.DataFrame()
+    b = np.empty((hoa112_dim, 1), dtype=dict)
+    b_final = np.empty((hoa112_dim, 1), dtype=dict)
     for sessI in range(hoa112_dim):
         for runI in range(100):
             for j in np.max(np.max(s_total2[sessI])):
-                br = b[runI]
                 st2_ind = s_total2[sessI]
-                br[:, j] = np.mean(condition_matrix[sessI][np.where(st2_ind[:, runI] == j), 1], 1).T
+                b[runI][:, j] = np.mean(condition_matrix[sessI][np.where(st2_ind[:, runI] == j), 1], 1).T
 
         dim = np.ndim(b[1])
         m = np.concatenate(dim + 1, b[:])
         b_final[sessI] = np.nanmean(m, 3)
 
-    sn_total = np.asarray([[dict() for i in range(hoa112_dim)]])
+    sn_total = np.empty((hoa112_dim, 1), dtype=dict)
     for itr in range(hoa112_dim):
         sn_total[itr] = sn[itr, 0]
         for runIter in range(1, 100):
             sn_total[iter] = np.hstack((sn_total[iter], s[iter, runIter]))
 
     nqpc_total = 0
-    sn_total2 = pd.DataFrame()
+    sn_total2 = np.empty((hoa112_dim, 1), dtype=dict)
     for sessI in range(hoa112_dim):
         sn2, qn2, xn_new3, nqpc = cons_iter(sn_total[sessI])
         sn_total2[sessI] = sn2.T
