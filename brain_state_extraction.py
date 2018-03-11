@@ -57,14 +57,11 @@ def brain_st_extr(condition_matrix, g_val):
     s_total = np.empty((max_cms, 1), dtype=dict)
     for itr in range(max_cms):
         s_total[itr, 0] = s[itr, 0]
-        print(s[itr, 0])
         for runItr in range(1, 100):
             s_total[itr, 0] = np.hstack((s_total[itr], s[itr, runItr]))
 
     qpc_total = 0
     s_total2 = np.empty((max_cms, 1), dtype=dict)
-    print(s_total)
-    print(s_total.shape)
     for sessI in range(max_cms):
         s2, q2, x_new3, qpc = cons_iter(s_total[sessI, 0])
         s_total2[sessI] = s2.T
@@ -92,8 +89,6 @@ def brain_st_extr(condition_matrix, g_val):
     sn_total2 = np.empty((max_cms, 1), dtype=dict)
     tick = 0
     for sessI in range(max_cms):
-        tick = tick + 1
-        print(tick)
         sn2, qn2, xn_new3, nqpc = cons_iter(sn_total[sessI])
         sn_total2[sessI] = sn2.T
         nqpc_total = nqpc_total + nqpc

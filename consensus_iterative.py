@@ -15,22 +15,23 @@ def cons_iter(c):
     x_new3: thresholded nodal association matrix
     qpc: quality of the consensus (lower == better)
     """
-    print(" ")
-    print(c)
-    print(c.shape)
-    n_part = c.shape[0]  # number of partitions
-    m = c.shape[1]  # size of the network
 
-    c_rand3 = np.zeros(c.shape)  # permuted version of c
+    n_part = c.shape[0]  # number of partitions
+    m = 1  # size of the network
+
+    # c_rand3 = np.zeros(c.shape)  # permuted version of c
     x = np.zeros((m, m))  # nodal association matrix for c
     x_rand3 = x  # random nodal association matrix for c_rand3
 
     # NODAL ASSOCIATION MATRIX
 
     # random permutation matrix
-    for i in range(n_part):
-        pr = np.random.permutation(m)
-        c_rand3[i, :] = c[i, pr]
+    c_rand3 = np.identity(n_part)
+    c_rand3 = c_rand3[np.random.permutation(n_part), :]
+
+    # for i in range(n_part):
+    #    pr = np.random.permutation(m)
+    #    c_rand3[i] = c[pr]
 
     for k in range(m):
         for p in range(m):
@@ -51,10 +52,10 @@ def cons_iter(c):
     x_new3 = np.zeros(m, m)
     x_new3[x > max(max(np.triu(x_rand3, 1)))] = x[x > max(max(np.triu(x_rand3, 1)))]
 
-    s2 = []
-    q2 = []
+    s2 = np.empty((n_part, ))
+    q2 = np.empty(n_part)
     for i in range(n_part):
-        s2[i, :], q2[i] = multislice_stat_si(x_new3, 1)
+        s2[i], q2[i] = multislice_stat_si(x_new3, 1)
 
     qpc = np.sum(np.sum(np.abs(np.diff(s2))))
 
